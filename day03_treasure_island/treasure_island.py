@@ -25,10 +25,10 @@ if direction == "left":
     if action == "wait":
         door = input("You arrive at the island unharmed.There is a house with 3 doors. \n  One red, one yellow,and one blue. Which color do you choose? \n")
         if door == "yellow":
-            print("You Won")
+            print("You found the treasure. You Win!")
         else:
-            print("Game Over")
+            print("It's a room full of fire. Game Over")
     else:
-        print("Game Over")   
+        print("You got attacked by an angry trout. Game Over")   
 else: 
-    print("Game Over")
+    print("You fell into a hole. Game Over")
