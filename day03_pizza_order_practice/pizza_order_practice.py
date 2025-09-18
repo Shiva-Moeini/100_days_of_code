@@ -30,6 +30,6 @@ if pepperoni == "Y":
 if cheese == "Y":
     bill += 1
 
-print (bill)
+print (f"Your final bill is: ${bill}")
 
 
