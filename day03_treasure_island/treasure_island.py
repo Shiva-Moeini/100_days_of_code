@@ -19,4 +19,16 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/
 *******************************************************************************''')
 print ("Welcome to Treasure Island.\nYour mission is to find the treasure.")
-direction = input("You're at a cross road. Where do you want to go? \n Type \"left\" or \"right\"")
+direction = input("You're at a cross road. Where do you want to go? \n  Type \"left\" or \"right\"\n")
+if direction == "left":
+    action = input("You've come to a lake. There is an island in the middle of the lake. \n  Type \"wait\" to wait for a boat. Type \"swim\" to swim across.\n")
+    if action == "wait":
+        door = input("You arrive at the island unharmed.There is a house with 3 doors. \n  One red, one yellow,and one blue. Which color do you choose? \n")
+        if door == "yellow":
+            print("You Won")
+        else:
+            print("Game Over")
+    else:
+        print("Game Over")   
+else: 
+    print("Game Over")
