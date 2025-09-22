@@ -5,5 +5,13 @@ print(random_word)
 word_length = len(random_word)
 print(word_length)
 placeholder = ""
+display = ""
+for _ in random_word:
+    placeholder += "-"
+print(placeholder)
 
+ 
 guess = input("Guess a letter:\n").lower()
+
+
+
