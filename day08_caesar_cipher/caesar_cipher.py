@@ -22,17 +22,18 @@ what_to_do = input("Type 'encode' to encrypt, type 'decode ' to decrypt:\n")
 if what_to_do not in ("encode" ,"decode"):
     print("You typed wrong.")
     exit()
-text = input ("Type your message:\n").lower()
-shift = int (input ("Type the shift number:\n"))
+text = input("Type your message:\n").lower()
+shift = int(input ("Type the shift number:\n"))
 
-
-def encrypt(message, shifted_number):
-    cipher_letters = ""
+def cesaer(message, shifted_number, encode_or_decode):
+    cipher_letters= ""
+    if encode_or_decode == "decode":
+            shifted_number *= -1
     for i in message:
-        shifted_position = (alphabet.index(i) + shifted_number) % 26
-        cipher_letters += alphabet[shifted_position]
-    print(f"Here is your encoded message : {cipher_letters}")
         
+        shifted_letters = (alphabet.index(i) + shifted_number) % 26
+        cipher_letters += alphabet[shifted_letters]
+    print(f"Here is your {encode_or_decode}d message : {cipher_letters}")
 
-    
-encrypt(message = text , shifted_number= shift)
+cesaer(message=text, shifted_number=shift,encode_or_decode=what_to_do)
+
