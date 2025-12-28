@@ -19,6 +19,20 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
  'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 what_to_do = input("Type 'encode' to encrypt, type 'decode ' to decrypt:\n")
+if what_to_do not in ("encode" ,"decode"):
+    print("You typed wrong.")
+    exit()
 text = input ("Type your message:\n").lower()
 shift = int (input ("Type the shift number:\n"))
 
+
+def encrypt(message, shifted_number):
+    cipher_letters = ""
+    for i in message:
+        shifted_position = (alphabet.index(i) + shifted_number) % 26
+        cipher_letters += alphabet[shifted_position]
+    print(f"Here is your encoded message : {cipher_letters}")
+        
+
+    
+encrypt(message = text , shifted_number= shift)
