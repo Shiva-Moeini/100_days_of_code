@@ -25,7 +25,7 @@ if what_to_do not in ("encode" ,"decode"):
 text = input("Type your message:\n").lower()
 shift = int(input ("Type the shift number:\n"))
 
-def cesaer(message, shifted_number, encode_or_decode):
+def caesar(message, shifted_number, encode_or_decode):
     cipher_letters= ""
     if encode_or_decode == "decode":
             shifted_number *= -1
@@ -35,5 +35,5 @@ def cesaer(message, shifted_number, encode_or_decode):
         cipher_letters += alphabet[shifted_letters]
     print(f"Here is your {encode_or_decode}d message : {cipher_letters}")
 
-cesaer(message=text, shifted_number=shift,encode_or_decode=what_to_do)
+caesar(message=text, shifted_number=shift,encode_or_decode=what_to_do)
 
