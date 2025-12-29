@@ -1,3 +1,5 @@
+import logo
+
 def add(n1, n2):
     return n1 + n2
 
@@ -20,6 +22,7 @@ information = {
 }
 
 def calculator():
+    print(logo)
     still_going = True
     num1 = float(input("Enter the first number:"))
     while still_going:
